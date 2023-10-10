@@ -17,6 +17,7 @@ class CalculateIntent {
 
 extension CalculateIntent: CalculateIntentProtocol {
     func buttonPressed() {
+        self.model?.randomizeInt()
         self.model?.switchRandomOperation()
     }
 }

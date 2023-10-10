@@ -12,7 +12,7 @@ struct MVIDemoApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                DiaryListView()
+                CalculateView.build()
             }
         }
     }

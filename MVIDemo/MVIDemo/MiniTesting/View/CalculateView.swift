@@ -7,32 +7,17 @@
 
 import SwiftUI
 
-extension CalculateView {
-    static func build() -> some View {
-        let model = CalculateModel()
-        let intent = CalculateIntent()
-        let container = MVIContainer(
-            intent: intent as CalculateIntentProtocol,
-            model: model as CalculateModelStateProtocol
-        )
-        let view = CalculateView(container: container)
-        
-        return view
-    }
-}
-
 struct CalculateView: View {
     @StateObject var container:
-    MVIContainer<CalculateIntentProtocol, CalculateModelStateProtocol>
+    MVIContainer<CalculateIntent, CalculateModelStateProtocol>
     
     private var state: CalculateModelStateProtocol { container.model }
     private var intent: CalculateIntentProtocol { container.intent }
-
-    @State var firstNum: String = ""
-    @State var secondNum: String = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
+            Spacer()
+            
             HStack {
                 TextField(
                     "",
@@ -42,7 +27,6 @@ struct CalculateView: View {
                 .textFieldStyle(.roundedBorder)
                 
                 TextField(
-                    
                     "",
                     text: self.$container.model.secondNum,
                     prompt: Text("두 번째 수")
@@ -50,21 +34,45 @@ struct CalculateView: View {
                 .textFieldStyle(.roundedBorder)
             }
             
-            Button("➕") {
-                intent.buttonPressed()
+            Button("🪄 Random Operation") {
+                self.intent.buttonPressed()
             }
             .buttonStyle(.borderedProminent)
             
+            Spacer()
             
-            Text("\(state.result)")
-                .font(.title2)
+            HStack {
+                Text("Result: ")
+                Spacer()
+                Text("\(state.result)")
+                    .font(.largeTitle)
+            }
+            
+            Spacer()
         }
+        .padding(.horizontal, 20)
+        .navigationTitle("Guess the Operation!")
     }
 }
 
+extension CalculateView {
+    static func build() -> some View {
+        let model = CalculateModel()
+        let intent = CalculateIntent(model: model)
+        let container = MVIContainer(
+            intent: intent,
+            model: model as CalculateModelStateProtocol,
+            modelChangedPublisher: model.objectWillChange
+        )
+        
+        let view = CalculateView(container: container)
+        
+        return view
+    }
+}
 
-//struct CalculateView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CalculateView(container: MVIContainer<CalculateIntentProtocol, CalculateModelStateProtocol>)
-//    }
-//}
+struct CalculateView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculateView.build()
+    }
+}

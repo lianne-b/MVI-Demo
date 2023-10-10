@@ -11,11 +11,11 @@
 		EF0A16FF2AD2D03B0053F434 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A16FE2AD2D03B0053F434 /* DiaryModel.swift */; };
 		EF0A17022AD2E8DD0053F434 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A17012AD2E8DD0053F434 /* DiaryListView.swift */; };
 		EF0A17082AD2E9470053F434 /* DiaryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A17072AD2E9470053F434 /* DiaryListCell.swift */; };
+		EF7158F02AD4DB42002C07D5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBACA0E2AD442410006AABE /* Container.swift */; };
 		EF783C6F2ACD315500C166C6 /* MVIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF783C6E2ACD315500C166C6 /* MVIDemoApp.swift */; };
 		EF783C712ACD315500C166C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF783C702ACD315500C166C6 /* ContentView.swift */; };
 		EF783C732ACD315600C166C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF783C722ACD315600C166C6 /* Assets.xcassets */; };
 		EF783C762ACD315600C166C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF783C752ACD315600C166C6 /* Preview Assets.xcassets */; };
-		EFBAC9F52AD3EB990006AABE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBAC9F42AD3EB990006AABE /* Container.swift */; };
 		EFBAC9FB2AD435740006AABE /* DiaryModelStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBAC9FA2AD435740006AABE /* DiaryModelStateProtocol.swift */; };
 		EFBAC9FD2AD436E60006AABE /* DiaryModelActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBAC9FC2AD436E60006AABE /* DiaryModelActionProtocol.swift */; };
 		EFBACA002AD438FC0006AABE /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBAC9FF2AD438FC0006AABE /* CalculateView.swift */; };
@@ -24,7 +24,6 @@
 		EFBACA062AD43C9F0006AABE /* CalculateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBACA052AD43C9F0006AABE /* CalculateModel.swift */; };
 		EFBACA0B2AD43E3A0006AABE /* CalculateIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBACA0A2AD43E3A0006AABE /* CalculateIntentProtocol.swift */; };
 		EFBACA0D2AD43EB10006AABE /* CalculateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBACA0C2AD43EB10006AABE /* CalculateIntent.swift */; };
-		EFBACA0F2AD442410006AABE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBACA0E2AD442410006AABE /* Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		EF783C702ACD315500C166C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF783C722ACD315600C166C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF783C752ACD315600C166C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EFBAC9F42AD3EB990006AABE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		EFBAC9FA2AD435740006AABE /* DiaryModelStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModelStateProtocol.swift; sourceTree = "<group>"; };
 		EFBAC9FC2AD436E60006AABE /* DiaryModelActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModelActionProtocol.swift; sourceTree = "<group>"; };
 		EFBAC9FF2AD438FC0006AABE /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
@@ -80,6 +78,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EF7158F12AD4DC94002C07D5 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				EFBACA0E2AD442410006AABE /* Container.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		EF783C622ACD315500C166C6 = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +111,6 @@
 				EF0A17032AD2E8E80053F434 /* Views */,
 				EFBAC9F62AD422440006AABE /* Intents */,
 				EFBACA102AD443280006AABE /* Network */,
-				EFBAC9F72AD4225A0006AABE /* Containers */,
 				EF0A17062AD2E9040053F434 /* Models */,
 				EF783C722ACD315600C166C6 /* Assets.xcassets */,
 				EF783C742ACD315600C166C6 /* Preview Content */,
@@ -128,20 +133,12 @@
 			path = Intents;
 			sourceTree = "<group>";
 		};
-		EFBAC9F72AD4225A0006AABE /* Containers */ = {
-			isa = PBXGroup;
-			children = (
-				EFBAC9F42AD3EB990006AABE /* Container.swift */,
-			);
-			path = Containers;
-			sourceTree = "<group>";
-		};
 		EFBAC9FE2AD438DA0006AABE /* MiniTesting */ = {
 			isa = PBXGroup;
 			children = (
-				EFBACA0E2AD442410006AABE /* Container.swift */,
 				EFBACA092AD43DFC0006AABE /* Intent */,
 				EFBACA082AD43DF30006AABE /* View */,
+				EF7158F12AD4DC94002C07D5 /* Container */,
 				EFBACA072AD43DE60006AABE /* Model */,
 			);
 			path = MiniTesting;
@@ -168,8 +165,8 @@
 		EFBACA092AD43DFC0006AABE /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				EFBACA0A2AD43E3A0006AABE /* CalculateIntentProtocol.swift */,
 				EFBACA0C2AD43EB10006AABE /* CalculateIntent.swift */,
+				EFBACA0A2AD43E3A0006AABE /* CalculateIntentProtocol.swift */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -251,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7158F02AD4DB42002C07D5 /* Container.swift in Sources */,
 				EFBACA0D2AD43EB10006AABE /* CalculateIntent.swift in Sources */,
 				EFBACA042AD43AD00006AABE /* CalculateModelActionProtocol.swift in Sources */,
 				EF783C712ACD315500C166C6 /* ContentView.swift in Sources */,
@@ -261,10 +259,8 @@
 				EFBACA0B2AD43E3A0006AABE /* CalculateIntentProtocol.swift in Sources */,
 				EF0A17022AD2E8DD0053F434 /* DiaryListView.swift in Sources */,
 				EFBAC9FD2AD436E60006AABE /* DiaryModelActionProtocol.swift in Sources */,
-				EFBAC9F52AD3EB990006AABE /* Container.swift in Sources */,
 				EFBACA022AD43A610006AABE /* CalculateModelStateProtocol.swift in Sources */,
 				EFBAC9FB2AD435740006AABE /* DiaryModelStateProtocol.swift in Sources */,
-				EFBACA0F2AD442410006AABE /* Container.swift in Sources */,
 				EF0A17082AD2E9470053F434 /* DiaryListCell.swift in Sources */,
 				EF0A16FC2AD2CF910053F434 /* DiaryDetailView.swift in Sources */,
 			);

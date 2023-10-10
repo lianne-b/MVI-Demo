@@ -8,6 +8,7 @@
 import Foundation
 
 protocol CalculateModelActionProtocol: AnyObject {
+    func randomizeInt()
     func switchRandomOperation()
     func addNumbers()
     func subtractNumbers()

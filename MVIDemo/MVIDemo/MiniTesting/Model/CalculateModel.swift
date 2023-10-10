@@ -15,9 +15,10 @@ final class CalculateModel:
     @Published var firstNum: String = ""
     @Published var secondNum: String = ""
     @Published var result: Int = 0
-    @Published var randomOrder: Int = Int.random(in: 0..<4)
+    @Published var randomOrder: Int = 0
     
     func switchRandomOperation() {
+        print("switched")
         if randomOrder == 0 {
             addNumbers()
         } else if randomOrder == 1 {
@@ -29,10 +30,15 @@ final class CalculateModel:
         }
     }
     
+    func randomizeInt() {
+        self.randomOrder = Int.random(in: 0..<4)
+    }
+    
     func addNumbers() {
         if let firstNum = Int(self.firstNum),
            let secondNum = Int(self.secondNum) {
             self.result = Int(firstNum) + Int(secondNum)
+            print(self.result)
         }
     }
     
@@ -40,6 +46,7 @@ final class CalculateModel:
         if let firstNum = Int(self.firstNum),
            let secondNum = Int(self.secondNum) {
             self.result = Int(firstNum) - Int(secondNum)
+            print(self.result)
         }
     }
     
@@ -47,6 +54,7 @@ final class CalculateModel:
         if let firstNum = Int(self.firstNum),
            let secondNum = Int(self.secondNum) {
             self.result = Int(firstNum) * Int(secondNum)
+            print(self.result)
         }
     }
     
@@ -54,6 +62,7 @@ final class CalculateModel:
         if let firstNum = Int(self.firstNum),
            let secondNum = Int(self.secondNum) {
             self.result = Int(firstNum) / Int(secondNum)
+            print(self.result)
         }
     }
 }
